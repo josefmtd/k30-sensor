@@ -8,7 +8,7 @@ sensor.flushInput()
 
 time.sleep(1)
 
-for i in range(20):
+while True:
     sensor.flushInput()
     sensor.write("\xFE\x04\x00\x03\x00\x01\xD5\xC5")
     time.sleep(.5)
@@ -17,5 +17,5 @@ for i in range(20):
     high = ord(response[3])
     low = ord(response[4])
     co2 = (high*256) + low
-    print "CO2 = " + str(co2)
-    time.sleep(.1)
+    print "CO2 = " + str(co2) + "ppm"
+    time.sleep(1.5)
