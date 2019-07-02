@@ -9,6 +9,15 @@ sensor.flushInput()
 time.sleep(1)
 
 sensor.flushInput()
+
+# Get Vendor Name
+sensor.write("\xFE\x2B\x0E\x04\x00\x67\x33")
+time.sleep(.5)
+
+response = sensor.read(23)
+print(response)
+
+# Get Product Code
 sensor.write("\xFE\x2B\x0E\x04\x01\xA6\xF3")
 time.sleep(.5)
 

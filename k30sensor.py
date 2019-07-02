@@ -10,7 +10,7 @@ time.sleep(1)
 
 for i in range(20):
     sensor.flushInput()
-    sensor.write("\xFE\x44\x00\x08\x02\x9F\x25")
+    sensor.write("\xFE\x04\x00\x03\x00\x01\xD5\xC5")
     time.sleep(.5)
 
     response = sensor.read(7)
