@@ -11,14 +11,14 @@ time.sleep(1)
 sensor.flushInput()
 
 # Get Vendor Name
-sensor.write("\xFE\x2B\x0E\x04\x00\x67\x33")
+sensor.write("\x68\x2B\x0E\x04\x00\x2F\x2E")
 time.sleep(.5)
 
 response = sensor.read(23)
 print(response)
 
 # Get Product Code
-sensor.write("\xFE\x2B\x0E\x04\x01\xA6\xF3")
+sensor.write("\x68\x2B\x0E\x04\x01\xEE\xEE")
 time.sleep(.5)
 
 response = sensor.read(26)
